@@ -1,0 +1,78 @@
+/* Global Styles - Lee's Essential Home Solutions */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen leading-relaxed antialiased;
+    @apply bg-background text-text;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  img {
+    @apply max-w-full h-auto block;
+  }
+
+  a {
+    @apply no-underline transition-colors duration-200;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    @apply cursor-pointer;
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  /* Primary Button */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-primary-dark transition-colors;
+    @apply shadow-lg shadow-primary/25;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply bg-background text-primary px-6 py-3 rounded-lg font-semibold;
+    @apply border-2 border-border hover:border-primary transition-colors;
+  }
+
+  /* Card Component */
+  .card {
+    @apply bg-background rounded-2xl p-8 shadow-sm;
+    @apply hover:shadow-md transition-shadow;
+  }
+
+  /* Section Container */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+@layer utilities {
+  /* Focus styles for accessibility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}

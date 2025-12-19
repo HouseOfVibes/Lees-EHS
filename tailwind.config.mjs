@@ -4,8 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand Colors
+        // CSS Variable-based theming (for dark mode support)
         primary: {
+          DEFAULT: 'var(--color-primary)',
+          light: 'var(--color-primary-light)',
+          dark: 'var(--color-primary-dark)',
+          // Keep original palette for gradients/specific use
           50: '#f0f9ff',
           100: '#e0f2fe',
           200: '#bae6fd',
@@ -19,6 +23,10 @@ export default {
           950: '#082f49',
         },
         accent: {
+          DEFAULT: 'var(--color-accent)',
+          light: 'var(--color-accent-light)',
+          dark: 'var(--color-accent-dark)',
+          // Keep original palette
           50: '#f0fdf4',
           100: '#dcfce7',
           200: '#bbf7d0',
@@ -31,6 +39,22 @@ export default {
           900: '#14532d',
           950: '#052e16',
         },
+        // Theme-aware semantic colors
+        text: {
+          DEFAULT: 'var(--color-text)',
+          muted: 'var(--color-text-muted)',
+          offset: 'var(--color-text-offset)',
+        },
+        background: {
+          DEFAULT: 'var(--color-background)',
+          offset: 'var(--color-background-offset)',
+          alt: 'var(--color-background-alt)',
+        },
+        border: {
+          DEFAULT: 'var(--color-border)',
+          offset: 'var(--color-border-offset)',
+        },
+        // Keep neutral palette for specific needs
         neutral: {
           50: '#fafafa',
           100: '#f5f5f5',
