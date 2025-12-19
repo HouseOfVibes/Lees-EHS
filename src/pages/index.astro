@@ -1,38 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ThemeSwitcher from '../components/ThemeSwitcher.astro';
 ---
 
 <Layout title="Lee's Essential Home Solutions | Meridiana Home Services">
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+  <nav class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm shadow-sm z-50 border-b border-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <a href="/" class="font-heading font-bold text-xl text-primary-700">
+        <a href="/" class="font-heading font-bold text-xl text-primary">
           Lee's Essential Home Solutions
         </a>
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#services" class="text-neutral-600 hover:text-primary-600 transition-colors">Services</a>
-          <a href="#pricing" class="text-neutral-600 hover:text-primary-600 transition-colors">Pricing</a>
-          <a href="#about" class="text-neutral-600 hover:text-primary-600 transition-colors">About</a>
-          <a href="#contact" class="bg-primary-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors">
+          <a href="#services" class="text-text-muted hover:text-primary transition-colors">Services</a>
+          <a href="#pricing" class="text-text-muted hover:text-primary transition-colors">Pricing</a>
+          <a href="#about" class="text-text-muted hover:text-primary transition-colors">About</a>
+          <ThemeSwitcher />
+          <a href="#contact" class="bg-primary text-white px-5 py-2 rounded-lg font-medium hover:bg-primary-dark transition-colors">
             Get Started
           </a>
         </div>
         <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-neutral-600" aria-label="Toggle menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+        <div class="md:hidden flex items-center space-x-2">
+          <ThemeSwitcher />
+          <button id="mobile-menu-btn" class="p-2 text-text-muted" aria-label="Toggle menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div id="mobile-menu" class="hidden md:hidden bg-background border-t border-border">
       <div class="px-4 py-4 space-y-3">
-        <a href="#services" class="block text-neutral-600 hover:text-primary-600">Services</a>
-        <a href="#pricing" class="block text-neutral-600 hover:text-primary-600">Pricing</a>
-        <a href="#about" class="block text-neutral-600 hover:text-primary-600">About</a>
-        <a href="#contact" class="block bg-primary-600 text-white px-5 py-2 rounded-lg font-medium text-center">
+        <a href="#services" class="block text-text-muted hover:text-primary">Services</a>
+        <a href="#pricing" class="block text-text-muted hover:text-primary">Pricing</a>
+        <a href="#about" class="block text-text-muted hover:text-primary">About</a>
+        <a href="#contact" class="block bg-primary text-white px-5 py-2 rounded-lg font-medium text-center">
           Get Started
         </a>
       </div>
@@ -40,174 +45,174 @@ import Layout from '../layouts/Layout.astro';
   </nav>
 
   <!-- Hero Section -->
-  <header class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+  <header class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-primary-50 via-background to-accent-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
-        <p class="text-primary-600 font-medium mb-4">Veteran-Owned | Serving Meridiana, TX</p>
-        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+        <p class="text-primary font-medium mb-4">Veteran-Owned | Serving Meridiana, TX</p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6">
           Stop Forgetting Your Filters.
         </h1>
-        <p class="text-xl md:text-2xl text-neutral-600 mb-8">
+        <p class="text-xl md:text-2xl text-text-muted mb-8">
           Monthly HVAC filters, water softener salt, and trash bin cleaning — delivered and done. One service. Three headaches gone.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" class="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25">
+          <a href="#contact" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25">
             Get Your First Month Free
           </a>
-          <a href="#services" class="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-primary-200 hover:border-primary-300 transition-colors">
+          <a href="#services" class="bg-background text-primary px-8 py-4 rounded-lg font-semibold text-lg border-2 border-border hover:border-primary transition-colors">
             See How It Works
           </a>
         </div>
-        <p class="mt-6 text-neutral-500 text-sm">No contracts. Cancel anytime. Your Meridiana neighbor.</p>
+        <p class="mt-6 text-text-offset text-sm">No contracts. Cancel anytime. Your Meridiana neighbor.</p>
       </div>
     </div>
   </header>
 
   <!-- Problem Section -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-16 md:py-24 bg-background">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">
           Sound Familiar?
         </h2>
-        <p class="text-lg text-neutral-600">
+        <p class="text-lg text-text-muted">
           You're busy. These things slip through the cracks. We get it.
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-neutral-50 rounded-2xl p-8">
+        <div class="bg-background-offset rounded-2xl p-8">
           <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-neutral-900">"When did I last change that filter?"</h3>
-          <p class="text-neutral-600">You know you should change it. You keep forgetting. Meanwhile, your HVAC works harder and your air quality suffers.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">"When did I last change that filter?"</h3>
+          <p class="text-text-muted">You know you should change it. You keep forgetting. Meanwhile, your HVAC works harder and your air quality suffers.</p>
         </div>
-        <div class="bg-neutral-50 rounded-2xl p-8">
+        <div class="bg-background-offset rounded-2xl p-8">
           <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-neutral-900">"I'm not hauling 40-lb salt bags."</h3>
-          <p class="text-neutral-600">The water softener is beeping again. Another trip to the store. Another heavy bag to wrestle into the garage.</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">"I'm not hauling 40-lb salt bags."</h3>
+          <p class="text-text-muted">The water softener is beeping again. Another trip to the store. Another heavy bag to wrestle into the garage.</p>
         </div>
-        <div class="bg-neutral-50 rounded-2xl p-8">
+        <div class="bg-background-offset rounded-2xl p-8">
           <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-xl mb-2 text-neutral-900">"Those bins smell terrible."</h3>
-          <p class="text-neutral-600">Houston summer + trash bins = a smell you can't ignore. But who has time to scrub trash cans?</p>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">"Those bins smell terrible."</h3>
+          <p class="text-text-muted">Houston summer + trash bins = a smell you can't ignore. But who has time to scrub trash cans?</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 md:py-24 bg-neutral-50">
+  <section id="services" class="py-16 md:py-24 bg-background-offset">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">
           What We Handle For You
         </h2>
-        <p class="text-lg text-neutral-600">
+        <p class="text-lg text-text-muted">
           One monthly visit. Three problems solved. You never think about it again.
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Service 1 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-background rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-border">
           <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-2xl mb-3 text-neutral-900">HVAC Filter Delivery + Installation</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="font-heading font-bold text-2xl mb-3 text-text">HVAC Filter Delivery + Installation</h3>
+          <p class="text-text-muted mb-4">
             We bring the right filter for your system, install it, and take the old one with us. You never climb a ladder or wonder "when did I last change that?" again.
           </p>
-          <p class="text-sm text-primary-600 font-medium">Monthly or quarterly service available</p>
+          <p class="text-sm text-primary font-medium">Monthly or quarterly service available</p>
         </div>
         <!-- Service 2 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-background rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-border">
           <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-2xl mb-3 text-neutral-900">Water Softener Salt Refill</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="font-heading font-bold text-2xl mb-3 text-text">Water Softener Salt Refill</h3>
+          <p class="text-text-muted mb-4">
             No more hauling 40-lb bags from the store. We deliver high-quality salt directly to your garage and pour it into your system. Your softener stays full, your back stays happy.
           </p>
-          <p class="text-sm text-primary-600 font-medium">Typically every 4-8 weeks</p>
+          <p class="text-sm text-primary font-medium">Typically every 4-8 weeks</p>
         </div>
         <!-- Service 3 -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="bg-background rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-border">
           <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
             </svg>
           </div>
-          <h3 class="font-heading font-bold text-2xl mb-3 text-neutral-900">Trash Bin Cleaning + Sanitizing</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="font-heading font-bold text-2xl mb-3 text-text">Trash Bin Cleaning + Sanitizing</h3>
+          <p class="text-text-muted mb-4">
             High-pressure hot water wash eliminates odors, bacteria, and buildup. Your bins look and smell like new. Because nobody wants to be the "trash bin house."
           </p>
-          <p class="text-sm text-primary-600 font-medium">Monthly in summer, quarterly otherwise</p>
+          <p class="text-sm text-primary font-medium">Monthly in summer, quarterly otherwise</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-16 md:py-24 bg-background">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">
           Simple as 1-2-3
         </h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">1</div>
-          <h3 class="font-heading font-bold text-xl mb-2">Tell Us Your Setup</h3>
-          <p class="text-neutral-600">Filter sizes, water softener details, number of bins. We'll customize your plan.</p>
+          <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">1</div>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">Tell Us Your Setup</h3>
+          <p class="text-text-muted">Filter sizes, water softener details, number of bins. We'll customize your plan.</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">2</div>
-          <h3 class="font-heading font-bold text-xl mb-2">We Show Up Monthly</h3>
-          <p class="text-neutral-600">On your scheduled day, we handle everything. You don't even need to be home.</p>
+          <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">2</div>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">We Show Up Monthly</h3>
+          <p class="text-text-muted">On your scheduled day, we handle everything. You don't even need to be home.</p>
         </div>
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">3</div>
-          <h3 class="font-heading font-bold text-xl mb-2">You Forget About It</h3>
-          <p class="text-neutral-600">Filters changed. Salt filled. Bins clean. Cross it off your mental to-do list forever.</p>
+          <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 text-white font-heading font-bold text-2xl">3</div>
+          <h3 class="font-heading font-bold text-xl mb-2 text-text">You Forget About It</h3>
+          <p class="text-text-muted">Filters changed. Salt filled. Bins clean. Cross it off your mental to-do list forever.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Pricing Section -->
-  <section id="pricing" class="py-16 md:py-24 bg-neutral-50">
+  <section id="pricing" class="py-16 md:py-24 bg-background-offset">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-4">
           Simple, Transparent Pricing
         </h2>
-        <p class="text-lg text-neutral-600">
+        <p class="text-lg text-text-muted">
           Choose what works for you. No hidden fees. No contracts.
         </p>
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <!-- Essential Plan -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border-2 border-neutral-100">
-          <h3 class="font-heading font-bold text-2xl mb-2 text-neutral-900">Essential Plan</h3>
-          <p class="text-neutral-600 mb-6">Perfect for filter and salt needs</p>
+        <div class="bg-background rounded-2xl p-8 shadow-sm border-2 border-border">
+          <h3 class="font-heading font-bold text-2xl mb-2 text-text">Essential Plan</h3>
+          <p class="text-text-muted mb-6">Perfect for filter and salt needs</p>
           <div class="mb-6">
-            <span class="font-heading text-5xl font-bold text-neutral-900">$49</span>
-            <span class="text-neutral-500">/month</span>
+            <span class="font-heading text-5xl font-bold text-text">$49</span>
+            <span class="text-text-offset">/month</span>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start">
@@ -229,20 +234,20 @@ import Layout from '../layouts/Layout.astro';
               <span>Text reminders before each visit</span>
             </li>
           </ul>
-          <a href="#contact" class="block text-center bg-neutral-100 text-neutral-700 px-6 py-3 rounded-lg font-semibold hover:bg-neutral-200 transition-colors">
+          <a href="#contact" class="block text-center bg-background-alt text-text px-6 py-3 rounded-lg font-semibold hover:bg-border transition-colors">
             Get Started
           </a>
         </div>
         <!-- Complete Plan -->
-        <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-primary-500 relative">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+        <div class="bg-background rounded-2xl p-8 shadow-lg border-2 border-primary relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
             Most Popular
           </div>
-          <h3 class="font-heading font-bold text-2xl mb-2 text-neutral-900">Complete Plan</h3>
-          <p class="text-neutral-600 mb-6">The full package for total peace of mind</p>
+          <h3 class="font-heading font-bold text-2xl mb-2 text-text">Complete Plan</h3>
+          <p class="text-text-muted mb-6">The full package for total peace of mind</p>
           <div class="mb-6">
-            <span class="font-heading text-5xl font-bold text-neutral-900">$79</span>
-            <span class="text-neutral-500">/month</span>
+            <span class="font-heading text-5xl font-bold text-text">$79</span>
+            <span class="text-text-offset">/month</span>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start">
@@ -270,73 +275,73 @@ import Layout from '../layouts/Layout.astro';
               <span>Service completion photos</span>
             </li>
           </ul>
-          <a href="#contact" class="block text-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25">
+          <a href="#contact" class="block text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25">
             Get Started
           </a>
         </div>
       </div>
-      <p class="text-center mt-8 text-neutral-500">
-        Need something custom? <a href="#contact" class="text-primary-600 hover:underline">Let's talk</a> about a plan that fits your home.
+      <p class="text-center mt-8 text-text-offset">
+        Need something custom? <a href="#contact" class="text-primary hover:underline">Let's talk</a> about a plan that fits your home.
       </p>
     </div>
   </section>
 
   <!-- About / Trust Section -->
-  <section id="about" class="py-16 md:py-24 bg-white">
+  <section id="about" class="py-16 md:py-24 bg-background">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-6">
             Your Meridiana Neighbor
           </h2>
-          <p class="text-lg text-neutral-600 mb-6">
+          <p class="text-lg text-text-muted mb-6">
             I'm not a faceless corporation. I live right here in Meridiana. When you see my truck in the neighborhood, wave — I'm probably headed to help one of your neighbors.
           </p>
           <div class="space-y-4">
             <div class="flex items-start">
               <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-neutral-900">Veteran-Owned</h3>
-                <p class="text-neutral-600">Proudly serving my community after serving my country.</p>
+                <h3 class="font-semibold text-text">Veteran-Owned</h3>
+                <p class="text-text-muted">Proudly serving my community after serving my country.</p>
               </div>
             </div>
             <div class="flex items-start">
               <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-neutral-900">8+ Years HVAC Experience</h3>
-                <p class="text-neutral-600">I know these systems inside and out. Your filters are in good hands.</p>
+                <h3 class="font-semibold text-text">8+ Years HVAC Experience</h3>
+                <p class="text-text-muted">I know these systems inside and out. Your filters are in good hands.</p>
               </div>
             </div>
             <div class="flex items-start">
               <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <svg class="w-5 h-5 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                 </svg>
               </div>
               <div>
-                <h3 class="font-semibold text-neutral-900">Licensed and Insured</h3>
-                <p class="text-neutral-600">Full coverage for your peace of mind.</p>
+                <h3 class="font-semibold text-text">Licensed and Insured</h3>
+                <p class="text-text-muted">Full coverage for your peace of mind.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="bg-neutral-100 rounded-2xl aspect-square flex items-center justify-center">
-          <p class="text-neutral-400 text-center px-8">[Photo: Lee in front of service vehicle in Meridiana neighborhood]</p>
+        <div class="bg-background-alt rounded-2xl aspect-square flex items-center justify-center">
+          <p class="text-text-offset text-center px-8">[Photo: Lee in front of service vehicle in Meridiana neighborhood]</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact / CTA Section -->
-  <section id="contact" class="py-16 md:py-24 bg-primary-600">
+  <section id="contact" class="py-16 md:py-24 bg-primary">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
@@ -346,46 +351,57 @@ import Layout from '../layouts/Layout.astro';
           Your first month is free. No risk, no commitment.
         </p>
       </div>
-      <form class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+      <form
+        action="https://formsubmit.co/YOUR_EMAIL_HERE"
+        method="POST"
+        class="bg-background rounded-2xl p-8 md:p-12 shadow-xl"
+      >
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_subject" value="New Lead from Lee's EHS Website">
+        <input type="hidden" name="_next" value="https://leesessentialhome.com/#contact">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_template" value="table">
+
         <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label for="name" class="block text-sm font-medium text-neutral-700 mb-2">Your Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="John Smith">
+            <label for="name" class="block text-sm font-medium text-text mb-2">Your Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-border bg-background text-text focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="John Smith">
           </div>
           <div>
-            <label for="phone" class="block text-sm font-medium text-neutral-700 mb-2">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="(555) 123-4567">
+            <label for="phone" class="block text-sm font-medium text-text mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-border bg-background text-text focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="(555) 123-4567">
           </div>
         </div>
         <div class="mb-6">
-          <label for="address" class="block text-sm font-medium text-neutral-700 mb-2">Street Address in Meridiana</label>
-          <input type="text" id="address" name="address" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="1234 Meridiana Parkway">
+          <label for="address" class="block text-sm font-medium text-text mb-2">Street Address in Meridiana</label>
+          <input type="text" id="address" name="address" required class="w-full px-4 py-3 rounded-lg border border-border bg-background text-text focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="1234 Meridiana Parkway">
         </div>
         <div class="mb-6">
-          <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">Email Address</label>
-          <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors" placeholder="john@email.com">
+          <label for="email" class="block text-sm font-medium text-text mb-2">Email Address</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-border bg-background text-text focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-colors" placeholder="john@email.com">
         </div>
         <div class="mb-6">
-          <label class="block text-sm font-medium text-neutral-700 mb-3">Which services are you interested in?</label>
+          <label class="block text-sm font-medium text-text mb-3">Which services are you interested in?</label>
           <div class="space-y-3">
             <label class="flex items-center">
-              <input type="checkbox" name="services" value="filters" class="w-5 h-5 text-primary-600 border-neutral-300 rounded focus:ring-primary-500">
-              <span class="ml-3 text-neutral-700">HVAC Filter Delivery + Installation</span>
+              <input type="checkbox" name="services" value="filters" class="w-5 h-5 text-primary border-border rounded focus:ring-primary">
+              <span class="ml-3 text-text">HVAC Filter Delivery + Installation</span>
             </label>
             <label class="flex items-center">
-              <input type="checkbox" name="services" value="salt" class="w-5 h-5 text-primary-600 border-neutral-300 rounded focus:ring-primary-500">
-              <span class="ml-3 text-neutral-700">Water Softener Salt Refill</span>
+              <input type="checkbox" name="services" value="salt" class="w-5 h-5 text-primary border-border rounded focus:ring-primary">
+              <span class="ml-3 text-text">Water Softener Salt Refill</span>
             </label>
             <label class="flex items-center">
-              <input type="checkbox" name="services" value="bins" class="w-5 h-5 text-primary-600 border-neutral-300 rounded focus:ring-primary-500">
-              <span class="ml-3 text-neutral-700">Trash Bin Cleaning</span>
+              <input type="checkbox" name="services" value="bins" class="w-5 h-5 text-primary border-border rounded focus:ring-primary">
+              <span class="ml-3 text-text">Trash Bin Cleaning</span>
             </label>
           </div>
         </div>
-        <button type="submit" class="w-full bg-primary-600 text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors shadow-lg shadow-primary-600/25">
+        <button type="submit" class="w-full bg-primary text-white px-6 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/25">
           Get My Free First Month
         </button>
-        <p class="text-center text-neutral-500 text-sm mt-4">
+        <p class="text-center text-text-offset text-sm mt-4">
           We'll text you within 24 hours to schedule your first visit.
         </p>
       </form>
