@@ -1,0 +1,20 @@
+{
+  "name": "lees-essential-home-solutions",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Website for Lee's Essential Home Solutions - Home maintenance services in Meridiana, TX",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "tailwindcss": "^3.4.0"
+  }
+}
